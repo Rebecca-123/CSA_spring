@@ -8,6 +8,7 @@
 </head>
 
 <body>
+<!-- Thymeleaf is used to render HTML -->
 <th:block layout:fragment="body" th:remove="tag">
   <!-- Start of body content specific to page -->
   <div class="px-4 py-5 my-5">
@@ -18,7 +19,10 @@
         <label for="greetField">To whom?</label>
         <input name="name" id="greetField">
         <button>Greetings!</button>
+
+        <!-- Thymeleaf will render name parameter set in the controller -->
         <p th:text="'Greetings, ' + ${name} + '!'"></p>
+
       </div>
     </form>
   </div>

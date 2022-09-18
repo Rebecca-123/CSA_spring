@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layouts/base}" lang="en">
+
+<head>
+  <title>Words</title>
+</head>
+
+<body>
+<th:block layout:fragment="body" th:remove="tag">
+  <!-- Start of body content specific to page -->
+  <div class="px-4 py-5 my-5">
+    <h1 class="display-5 fw-bold">Type a Word</h1><br></br>
+
+    <form action="/words" method="GET" id="wordsForm">
+      <div>
+        <label for="wordField">Word?</label>
+        <input name="word" id="wordField">
+        <button>Calculate!</button><br></br>
+        <p th:text="${word} + ' is ' + ${num} + ' characters long!'"></p>
+        <p th:text="'Is ' + ${word} + ' a ' + ' palindrome?'"></p>
+        <p th:text="${ans}"></p>
+      </div>
+    </form>
+  </div>
+  <!-- End of body content specific to page -->
+</th:block>
+</body>
+
+</html>

@@ -13,16 +13,16 @@ public class Words {
         model.addAttribute("word", word);
         model.addAttribute("num", count);
 
-
+        // check if palindrome
         int len = word.length();
-        int rep = len / 2; 
+        int rep = len / 2;
         String ans = "no";
         for(int i = 0; i <= rep; i++){
             if(word.charAt(i) == word.charAt(len- 1 - i)){
-                ans = "yes";
+                ans = "yes"; // might be palindrome
             }
             else{
-                ans = "no";
+                ans = "no"; // definitely not palindrome
                 break;
             }
         }
